@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2B5D905018C2DD6500B3660F /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D904F18C2DD6500B3660F /* PageContentViewController.m */; };
-		2B5D905418C2E2F500B3660F /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D905318C2E2F500B3660F /* TutorialViewController.m */; };
-		2B5D905A18C2E38600B3660F /* page1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5D905618C2E38600B3660F /* page1.png */; };
 		2B5D905B18C2E38600B3660F /* page2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5D905718C2E38600B3660F /* page2.png */; };
 		2B5D905C18C2E38600B3660F /* page3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5D905818C2E38600B3660F /* page3.png */; };
 		2B5D905D18C2E38600B3660F /* page4.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5D905918C2E38600B3660F /* page4.png */; };
@@ -39,6 +37,11 @@
 		3AA70AC118C2F7950045510D /* downvoteOn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA70AC018C2F7950045510D /* downvoteOn@2x.png */; };
 		3AA70AC318C2F7DB0045510D /* Nexa Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3AA70AC218C2F7DB0045510D /* Nexa Bold.otf */; };
 		3AA70AC618C304280045510D /* CMPopTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA70AC518C304280045510D /* CMPopTipView.m */; };
+		3AA70AC718C30D4C0045510D /* page1.png in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D905618C2E38600B3660F /* page1.png */; };
+		3AA70AC818C30D4C0045510D /* page2.png in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D905718C2E38600B3660F /* page2.png */; };
+		3AA70AC918C30D4C0045510D /* page3.png in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D905818C2E38600B3660F /* page3.png */; };
+		3AA70ACA18C30D4C0045510D /* page4.png in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D905918C2E38600B3660F /* page4.png */; };
+		3AA70ACB18C30D4C0045510D /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D905318C2E2F500B3660F /* TutorialViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -346,6 +349,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AA70AC718C30D4C0045510D /* page1.png in Sources */,
+				3AA70AC818C30D4C0045510D /* page2.png in Sources */,
+				3AA70AC918C30D4C0045510D /* page3.png in Sources */,
+				3AA70ACA18C30D4C0045510D /* page4.png in Sources */,
+				3AA70ACB18C30D4C0045510D /* TutorialViewController.m in Sources */,
 				3A915B9E18C29D21005FFE70 /* GlobalVar.m in Sources */,
 				3A915B7618C27698005FFE70 /* ViewController.m in Sources */,
 				2B5D905018C2DD6500B3660F /* PageContentViewController.m in Sources */,
