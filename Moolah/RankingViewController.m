@@ -231,7 +231,7 @@ CMPopTipView *roundRectButtonPopTipView;
     //convert object to data
     NSData* jsonData = [NSJSONSerialization dataWithJSONObject:dicToSend options:kNilOptions error:nil];
     
-    NSURL *url = [NSURL URLWithString:@"http://31bee7a9.ngrok.com/vote"];
+    NSURL *url = [NSURL URLWithString:@"http://micfok-opendata.herokuapp.com/vote"];
     NSMutableURLRequest *rq = [NSMutableURLRequest requestWithURL:url];
     [rq setHTTPMethod:@"POST"];
     

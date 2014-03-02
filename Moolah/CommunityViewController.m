@@ -1,5 +1,5 @@
 #import "CommunityViewController.h"
-#import "RankingCell.h"
+#import "CommunityCell.h"
 
 @interface CommunityViewController ()
 
@@ -17,7 +17,7 @@
     NSData *data = [NSData dataWithContentsOfFile:filePath];
     NSArray *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
     
-    NSURL *url = [NSURL URLWithString:@"http://31bee7a9.ngrok.com/community"];
+    NSURL *url = [NSURL URLWithString:@"http://micfok-opendata.herokuapp.com/community"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url
                                              cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData
                                          timeoutInterval:30.0];
@@ -57,30 +57,15 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"SettingsCell";
     
-    RankingCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    CommunityCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (cell == nil) {
-        cell = [[RankingCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[CommunityCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
     NSString *tweet = [[self.tweetsArray objectAtIndex:indexPath.row] objectForKey:@"score"];
     [cell.mainLabel setText:tweet];
     
-    NSNumber *voteStatus = [self.votesDictionary objectForKey:[[[self.tweetsArray objectAtIndex:indexPath.row] objectForKey:@"id"] stringValue]];
-    if(voteStatus.intValue==0) {
-        [cell.upBoat setSelected:NO];
-        [cell.downBoat setSelected:NO];
-    }
-    
-    if(voteStatus.intValue==1) {
-        [cell.upBoat setSelected:YES];
-        [cell.downBoat setSelected:NO];
-    }
-    
-    if(voteStatus.intValue==-1) {
-        [cell.upBoat setSelected:NO];
-        [cell.downBoat setSelected:YES];
-    }
     
     NSNumber *tweet2 = [[self.tweetsArray objectAtIndex:indexPath.row] objectForKey:@"amount"];
     
