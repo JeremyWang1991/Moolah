@@ -282,6 +282,9 @@ CMPopTipView *roundRectButtonPopTipView;
             [self submitData];
         }
         //push to community view
+        RankingViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"CommunityViewController"];
+//        [self.navigationController presentViewController:vc animated: completion:Nil];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 
