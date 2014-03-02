@@ -86,7 +86,7 @@ CMPopTipView *roundRectButtonPopTipView;
     
     NSNumber *tweet2 = [[self.tweetsArray objectAtIndex:indexPath.row] objectForKey:@"amount"];
     
-    float percentage = [tweet2 intValue]/2232736.00;
+    float percentage = [tweet2 intValue]/1732736.00;
     float milz = [tweet2 intValue]/1000.00;
     
     NSString *currency = [NSString stringWithFormat:@"$%.1f Million (%.3f%%)", milz,percentage];
