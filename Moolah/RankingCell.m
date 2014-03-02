@@ -54,8 +54,8 @@
         [self.downBoat addTarget:self action:@selector(downBoatPressed:) forControlEvents:UIControlEventTouchUpInside];
         
         self.infoButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        self.infoButton.frame = CGRectMake(size.width-80, 52, 31, 21);
-        [self.infoButton setBackgroundImage:[UIImage imageNamed: @"downvote.png"] forState:UIControlStateNormal];
+        self.infoButton.frame = CGRectMake(size.width-50, 30, 40, 40);
+        [self.infoButton setBackgroundImage:[UIImage imageNamed: @"infoButton.png"] forState:UIControlStateNormal];
         [self.infoButton addTarget:self action:@selector(infoPressed:) forControlEvents:UIControlEventTouchUpInside];
 
         // Add Labels to Content View

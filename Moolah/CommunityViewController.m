@@ -51,7 +51,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 80;
+    return 90;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -63,7 +63,7 @@
         cell = [[CommunityCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    NSString *tweet = [[self.tweetsArray objectAtIndex:indexPath.row] objectForKey:@"score"];
+    NSString *tweet = [[self.tweetsArray objectAtIndex:indexPath.row] objectForKey:@"title"];
     [cell.mainLabel setText:tweet];
     
     
@@ -74,8 +74,22 @@
     
     NSString *currency = [NSString stringWithFormat:@"$%.1f Million\n(%.2f%%)", milz,percentage];
     
-    
+    NSString *tweet3 = [[self.tweetsArray objectAtIndex:indexPath.row] objectForKey:@"score"];
+    [cell.scoreLabel setText:tweet3];
+
     [cell.amountLabel setText:currency];
+    
+    int upvotes = [[[self.tweetsArray objectAtIndex:indexPath.row] objectForKey:@"upvotes"] intValue];
+    
+    NSString *upvoteString = [NSString stringWithFormat:@"+%d", upvotes];
+    
+    [cell.upvoteLabel setText:upvoteString];
+    
+    int downvotes = [[[self.tweetsArray objectAtIndex:indexPath.row] objectForKey:@"downvotes"] intValue];
+    
+    NSString *downvoteString = [NSString stringWithFormat:@"-%d", downvotes];
+    
+    [cell.downvoteLabel setText:downvoteString];
     
     
     return cell;

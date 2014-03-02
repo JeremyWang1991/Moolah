@@ -49,6 +49,7 @@
 		3AA7A88E18C3B10100655C3D /* p1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA7A88B18C3B10100655C3D /* p1@2x.png */; };
 		3AA7A88F18C3B10100655C3D /* p2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA7A88C18C3B10100655C3D /* p2@2x.png */; };
 		3AA7A89018C3B10100655C3D /* p3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA7A88D18C3B10100655C3D /* p3@2x.png */; };
+		3AA7A89218C3B7BD00655C3D /* infoButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA7A89118C3B7BD00655C3D /* infoButton@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,7 @@
 		3AA7A88B18C3B10100655C3D /* p1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "p1@2x.png"; sourceTree = "<group>"; };
 		3AA7A88C18C3B10100655C3D /* p2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "p2@2x.png"; sourceTree = "<group>"; };
 		3AA7A88D18C3B10100655C3D /* p3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "p3@2x.png"; sourceTree = "<group>"; };
+		3AA7A89118C3B7BD00655C3D /* infoButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "infoButton@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +232,7 @@
 		3A915B6618C27698005FFE70 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3AA7A89118C3B7BD00655C3D /* infoButton@2x.png */,
 				3AA7A88B18C3B10100655C3D /* p1@2x.png */,
 				3AA7A88C18C3B10100655C3D /* p2@2x.png */,
 				3AA7A88D18C3B10100655C3D /* p3@2x.png */,
@@ -355,6 +358,7 @@
 				3A915B6A18C27698005FFE70 /* InfoPlist.strings in Resources */,
 				3A915B7318C27698005FFE70 /* Main.storyboard in Resources */,
 				3AA70AC318C2F7DB0045510D /* Nexa Bold.otf in Resources */,
+				3AA7A89218C3B7BD00655C3D /* infoButton@2x.png in Resources */,
 				3A23B18318C3AD8C0023A5D2 /* startButton@2x.png in Resources */,
 				3A915B9B18C27CB0005FFE70 /* fed_spending.json in Resources */,
 				2B5D905D18C2E38600B3660F /* page4.png in Resources */,

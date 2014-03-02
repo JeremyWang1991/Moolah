@@ -100,21 +100,21 @@ CMPopTipView *roundRectButtonPopTipView;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (nil == roundRectButtonPopTipView) {
-        roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"I am getting data from the server and displaying that data into my tableviewcell. but i want to load only 10 records at a time. for this purpose i am using limit-offset thing. but i'm not very much clear how to do this in ios. I am setting those limit-offset in NSUrl."];
-        roundRectButtonPopTipView.delegate = self;
-        roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
-        roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
-        
-        UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-        
-        [roundRectButtonPopTipView presentPointingAtView:cell inView:self.view animated:YES];
-    }
-    else {
-        // Dismiss
-        [roundRectButtonPopTipView dismissAnimated:YES];
-        roundRectButtonPopTipView = nil;
-    }
+//    if (nil == roundRectButtonPopTipView) {
+//        roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"I am getting data from the server and displaying that data into my tableviewcell. but i want to load only 10 records at a time. for this purpose i am using limit-offset thing. but i'm not very much clear how to do this in ios. I am setting those limit-offset in NSUrl."];
+//        roundRectButtonPopTipView.delegate = self;
+//        roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
+//        roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
+//        
+//        UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+//        
+//        [roundRectButtonPopTipView presentPointingAtView:cell inView:self.view animated:YES];
+//    }
+//    else {
+//        // Dismiss
+//        [roundRectButtonPopTipView dismissAnimated:YES];
+//        roundRectButtonPopTipView = nil;
+//    }
 }
 
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
