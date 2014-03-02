@@ -89,11 +89,28 @@ CMPopTipView *roundRectButtonPopTipView;
     float percentage = [tweet2 intValue]/2232736.00;
     float milz = [tweet2 intValue]/1000.00;
     
-    NSString *currency = [NSString stringWithFormat:@"$%.1f Million (%.3f%%)", milz,percentage];
+    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+    [numberFormatter setNumberStyle: NSNumberFormatterCurrencyStyle];
+    if (milz < 10) {
+        [numberFormatter setMaximumFractionDigits:2];
+    } else {
+        [numberFormatter setMaximumFractionDigits:0];
+    }
+    
+    NSString *monies = [numberFormatter stringFromNumber:[NSNumber numberWithFloat:milz]];
+    
+    NSString *currency = [[NSString alloc] init];
+    
+    if (milz < 1500) {
+        currency = [NSString stringWithFormat:@"~%@ M (%.3f%%)", monies,percentage];
+    } else {
+        currency = [NSString stringWithFormat:@"%@ M (%.1f%%)", monies,percentage];
+    }
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
 
     
     [cell.amountLabel setText:currency];
+//    [cell.amountLabel setText:monies];
     
     
     return cell;
