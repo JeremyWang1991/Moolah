@@ -50,6 +50,9 @@
 		3AA7A88F18C3B10100655C3D /* p2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA7A88C18C3B10100655C3D /* p2@2x.png */; };
 		3AA7A89018C3B10100655C3D /* p3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA7A88D18C3B10100655C3D /* p3@2x.png */; };
 		3AA7A89218C3B7BD00655C3D /* infoButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA7A89118C3B7BD00655C3D /* infoButton@2x.png */; };
+		3AA7A89618C3C21100655C3D /* mainLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA7A89318C3C21100655C3D /* mainLogo@2x.png */; };
+		3AA7A89718C3C21100655C3D /* resultsButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA7A89418C3C21100655C3D /* resultsButton@2x.png */; };
+		3AA7A89818C3C21100655C3D /* voteButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA7A89518C3C21100655C3D /* voteButton@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +121,9 @@
 		3AA7A88C18C3B10100655C3D /* p2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "p2@2x.png"; sourceTree = "<group>"; };
 		3AA7A88D18C3B10100655C3D /* p3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "p3@2x.png"; sourceTree = "<group>"; };
 		3AA7A89118C3B7BD00655C3D /* infoButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "infoButton@2x.png"; sourceTree = "<group>"; };
+		3AA7A89318C3C21100655C3D /* mainLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mainLogo@2x.png"; sourceTree = "<group>"; };
+		3AA7A89418C3C21100655C3D /* resultsButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "resultsButton@2x.png"; sourceTree = "<group>"; };
+		3AA7A89518C3C21100655C3D /* voteButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voteButton@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +238,9 @@
 		3A915B6618C27698005FFE70 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3AA7A89318C3C21100655C3D /* mainLogo@2x.png */,
+				3AA7A89418C3C21100655C3D /* resultsButton@2x.png */,
+				3AA7A89518C3C21100655C3D /* voteButton@2x.png */,
 				3AA7A89118C3B7BD00655C3D /* infoButton@2x.png */,
 				3AA7A88B18C3B10100655C3D /* p1@2x.png */,
 				3AA7A88C18C3B10100655C3D /* p2@2x.png */,
@@ -354,7 +363,10 @@
 				3A915B7818C27698005FFE70 /* Images.xcassets in Resources */,
 				3AA70AC118C2F7950045510D /* downvoteOn@2x.png in Resources */,
 				3AA7A88A18C3AE5500655C3D /* startButton@2x.png in Resources */,
+				3AA7A89718C3C21100655C3D /* resultsButton@2x.png in Resources */,
 				3AA7A88E18C3B10100655C3D /* p1@2x.png in Resources */,
+				3AA7A89618C3C21100655C3D /* mainLogo@2x.png in Resources */,
+				3AA7A89818C3C21100655C3D /* voteButton@2x.png in Resources */,
 				3A915B6A18C27698005FFE70 /* InfoPlist.strings in Resources */,
 				3A915B7318C27698005FFE70 /* Main.storyboard in Resources */,
 				3AA70AC318C2F7DB0045510D /* Nexa Bold.otf in Resources */,

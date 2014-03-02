@@ -91,7 +91,6 @@
     
     [cell.downvoteLabel setText:downvoteString];
     
-    
     return cell;
 }
 
