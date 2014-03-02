@@ -169,7 +169,10 @@ CMPopTipView *roundRectButtonPopTipView;
 
 -(void) customCell:(UITableViewCell *)cell infoPressed:(id)button {
     if (nil == roundRectButtonPopTipView) {
-        roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"I am getting data from the server and displaying that data into my tableviewcell. but i want to load only 10 records at a time. for this purpose i am using limit-offset thing. but i'm not very much clear how to do this in ios. I am setting those limit-offset in NSUrl."];
+        NSString *msg = [[self.tweetsArray objectAtIndex:[[self.tableView indexPathForCell:cell] row]] objectForKey:@"description"];
+        
+        
+        roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage: msg];
         roundRectButtonPopTipView.delegate = self;
         roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
         roundRectButtonPopTipView.textColor = [UIColor darkTextColor];

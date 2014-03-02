@@ -62,7 +62,6 @@
     if (cell == nil) {
         cell = [[CommunityCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    
     NSString *tweet = [[self.tweetsArray objectAtIndex:indexPath.row] objectForKey:@"title"];
     [cell.mainLabel setText:tweet];
     

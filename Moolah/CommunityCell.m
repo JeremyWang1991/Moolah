@@ -31,7 +31,7 @@
         
         
         // Initialize Amount Label
-        self.amountLabel = [[UILabel alloc] initWithFrame:CGRectMake(75, 20, size.width-100.0, size.height - 6.0)];
+        self.amountLabel = [[UILabel alloc] initWithFrame:CGRectMake(75, 25, size.width-100.0, size.height - 6.0)];
         [self.amountLabel setTextAlignment:NSTextAlignmentLeft];
         self.amountLabel.lineBreakMode = NSLineBreakByWordWrapping;
         self.amountLabel.numberOfLines = 1;
