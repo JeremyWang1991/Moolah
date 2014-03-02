@@ -38,7 +38,7 @@ CMPopTipView *roundRectButtonPopTipView;
     for (int i = 0; i<self.tweetsArray.count;i++) {
         [self.votesDictionary setObject:[NSNumber numberWithInt:0] forKey:[[[self.tweetsArray objectAtIndex:i] objectForKey:@"id"] stringValue]];
     }
-
+    
 }
 
 - (void)popTipViewWasDismissedByUser:(CMPopTipView *)popTipView {

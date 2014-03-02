@@ -28,18 +28,23 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
+
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     Boolean didTutorial = (Boolean)[defaults objectForKey:@"didTutorial"];
     if (!didTutorial) {
-//        [defaults setBool:YES forKey:@"didTutorial"];
-//        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//        LoginViewController * vc = (LoginViewController *)[sb instantiateViewControllerWithIdentifier:@"login"];
+        [defaults setBool:YES forKey:@"didTutorial"];
         TutorialViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"TutorialViewController"];
-        
-        [self presentViewController:vc animated:NO completion:Nil];
-        //        [self.navigationController presentViewController:vc animated:NO completion:nil];
+        [self.navigationController presentViewController:vc animated:NO completion:Nil];
     }
+
+    
+    NSDictionary *navbarTitleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                               [UIColor whiteColor],UITextAttributeTextColor, nil];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:navbarTitleTextAttributes];
+
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+
     
 }
 
@@ -47,6 +52,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)unwindtoViewController:(UIStoryboardSegue *)segue
+{
+    NSLog(@"unwindtoViewController triggered");
 }
 
 @end
