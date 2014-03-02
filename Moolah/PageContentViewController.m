@@ -29,6 +29,7 @@
 	// Do any additional setup after loading the view.
     
     self.backgroundImageView.image = [UIImage imageNamed:self.imageFile];
+    self.view.backgroundColor = [UIColor clearColor];
     self.titleLabel.text = self.titleText;
 }
 

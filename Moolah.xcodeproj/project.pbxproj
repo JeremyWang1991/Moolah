@@ -43,6 +43,7 @@
 		3AA70AC918C30D4C0045510D /* page3.png in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D905818C2E38600B3660F /* page3.png */; };
 		3AA70ACA18C30D4C0045510D /* page4.png in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D905918C2E38600B3660F /* page4.png */; };
 		3AA70ACB18C30D4C0045510D /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D905318C2E2F500B3660F /* TutorialViewController.m */; };
+		3AA7A88A18C3AE5500655C3D /* startButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA7A88918C3AE5500655C3D /* startButton@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		3AA70AC218C2F7DB0045510D /* Nexa Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa Bold.otf"; sourceTree = "<group>"; };
 		3AA70AC418C304280045510D /* CMPopTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPopTipView.h; sourceTree = "<group>"; };
 		3AA70AC518C304280045510D /* CMPopTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPopTipView.m; sourceTree = "<group>"; };
+		3AA7A88918C3AE5500655C3D /* startButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startButton@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,11 @@
 		2B5D905518C2E38600B3660F /* PageViewDemoImages */ = {
 			isa = PBXGroup;
 			children = (
+				3A23B18218C3AD8C0023A5D2 /* startButton@2x.png */,
+				3A23B17A18C3A3E40023A5D2 /* p1@2x.png */,
+				3A23B17B18C3A3E40023A5D2 /* p2@2x.png */,
+				3A23B17C18C3A3E40023A5D2 /* p3@2x.png */,
+				3A23B17D18C3A3E40023A5D2 /* pbg@2x.png */,
 				2B5D905618C2E38600B3660F /* page1.png */,
 				2B5D905718C2E38600B3660F /* page2.png */,
 				2B5D905818C2E38600B3660F /* page3.png */,
@@ -216,6 +223,7 @@
 		3A915B6618C27698005FFE70 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3AA7A88918C3AE5500655C3D /* startButton@2x.png */,
 				3AA70AC218C2F7DB0045510D /* Nexa Bold.otf */,
 				3AA70AC018C2F7950045510D /* downvoteOn@2x.png */,
 				3AA70ABE18C2F7900045510D /* upvoteOn@2x.png */,
@@ -324,17 +332,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A23B18118C3A3E40023A5D2 /* pbg@2x.png in Resources */,
 				3AA70ABF18C2F7900045510D /* upvoteOn@2x.png in Resources */,
+				3A23B18018C3A3E40023A5D2 /* p3@2x.png in Resources */,
 				3AA70ABC18C2F67E0045510D /* downvote@2x.png in Resources */,
 				3AA70ABD18C2F67E0045510D /* upvote@2x.png in Resources */,
 				3A915B7818C27698005FFE70 /* Images.xcassets in Resources */,
 				3AA70AC118C2F7950045510D /* downvoteOn@2x.png in Resources */,
+				3AA7A88A18C3AE5500655C3D /* startButton@2x.png in Resources */,
 				3A915B6A18C27698005FFE70 /* InfoPlist.strings in Resources */,
+				3A23B17F18C3A3E40023A5D2 /* p2@2x.png in Resources */,
 				3A915B7318C27698005FFE70 /* Main.storyboard in Resources */,
 				3AA70AC318C2F7DB0045510D /* Nexa Bold.otf in Resources */,
+				3A23B18318C3AD8C0023A5D2 /* startButton@2x.png in Resources */,
 				3A915B9B18C27CB0005FFE70 /* fed_spending.json in Resources */,
 				2B5D905D18C2E38600B3660F /* page4.png in Resources */,
 				2B5D905B18C2E38600B3660F /* page2.png in Resources */,
+				3A23B17E18C3A3E40023A5D2 /* p1@2x.png in Resources */,
 				2B5D905C18C2E38600B3660F /* page3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -28,8 +28,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    self.pageTitles = @[@"Over 200 Tips and Tricks", @"Discover Hidden Features", @"Bookmark Favorite Tip", @"Free Regular Update"];
-    self.pageImages = @[@"page1", @"page2", @"page3", @"page4", @"page5"];
+    self.pageTitles = @[@"", @"", @""];
+    self.pageImages = @[@"p1", @"p2", @"p3"];
     
     // Create page view controller
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
@@ -40,7 +40,7 @@
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
     // Change the size of page view controller
-    self.pageViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 30);
+    self.pageViewController.view.frame = CGRectMake(0, -20, self.view.frame.size.width, self.view.frame.size.height+20);
     
     [self addChildViewController:_pageViewController];
     [self.view addSubview:_pageViewController.view];
@@ -94,7 +94,22 @@
     pageContentViewController.titleText = self.pageTitles[index];
     pageContentViewController.pageIndex = index;
     
+    if (index == 2) {
+        UIButton *startButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        startButton.frame = CGRectMake(73, 310, 174, 54);
+        [startButton setBackgroundImage:[UIImage imageNamed: @"startButton.png"] forState:UIControlStateNormal];
+        
+        [startButton addTarget:self action:@selector(pushMain) forControlEvents:UIControlEventTouchUpInside];
+        
+        [pageContentViewController.view addSubview:startButton];
+        [pageContentViewController.view bringSubviewToFront:startButton];
+    }
+    
     return pageContentViewController;
+}
+
+-(void)pushMain {
+
 }
 
 - (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController

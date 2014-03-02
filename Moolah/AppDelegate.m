@@ -21,9 +21,10 @@
     }
     
     UIPageControl *pageControl = [UIPageControl appearance];
+    pageControl.frame = CGRectMake(0, 0, 320, 30);
     pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
-    pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
-    pageControl.backgroundColor = [UIColor whiteColor];
+    pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
+    pageControl.backgroundColor = [UIColor clearColor];
     
     return YES;
 }
