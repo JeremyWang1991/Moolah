@@ -208,7 +208,6 @@ CMPopTipView *roundRectButtonPopTipView;
     
     self.voted = NO;
     for (NSString *key in self.votesDictionary) {
-        NSLog(@"%@", [self.votesDictionary objectForKey:key]);
         if ([self.votesDictionary objectForKey:key] != [NSNumber numberWithInt:0]) {
             self.voted = YES;
         }
