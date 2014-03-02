@@ -11,7 +11,7 @@
 #import "Ranking.h"
 #import "CMPopTipView.h"
 
-@interface RankingViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, Ranking, CMPopTipViewDelegate>
+@interface RankingViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, Ranking, CMPopTipViewDelegate, UIAlertViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *tweetsArray;

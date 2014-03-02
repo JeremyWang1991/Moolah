@@ -11,6 +11,8 @@
 
 @interface RankingViewController ()
 
+@property bool voted;
+
 @end
 
 @implementation RankingViewController
@@ -204,7 +206,32 @@ CMPopTipView *roundRectButtonPopTipView;
 //    [censusNo addTarget:self action:@selector(submitData) forControlEvents:UIControlEventTouchUpInside];
 //    [censusNo addTarget:self action:@selector(removeCensusView) forControlEvents:UIControlEventTouchUpInside];
     
-    [self submitData];
+    self.voted = NO;
+    for (NSString *key in self.votesDictionary) {
+        NSLog(@"%@", [self.votesDictionary objectForKey:key]);
+        if ([self.votesDictionary objectForKey:key] != [NSNumber numberWithInt:0]) {
+            self.voted = YES;
+        }
+    }
+    
+    if (self.voted == YES) {
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Submit Feedback?"
+                                                          message:@"Submit your feedback to the platform and see what others are saying?"
+                                                         delegate:self
+                                                cancelButtonTitle:@"Not yet"
+                                                otherButtonTitles:@"Yes", nil];
+        [message show];
+    } else {
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Proceed?"
+                                                          message:@"Proceed to the community view without submitting any feedback?"
+                                                         delegate:self
+                                                cancelButtonTitle:@"No"
+                                                otherButtonTitles:@"Yes", nil];
+        [message show];
+    }
+
+    
+//    [self submitData];
     
 }
 
@@ -246,6 +273,17 @@ CMPopTipView *roundRectButtonPopTipView;
     [NSURLConnection sendAsynchronousRequest:rq queue:queue completionHandler:^(NSURLResponse *rsp, NSData *data, NSError *err) {
         NSLog(@"POST sent!");
     }];
+}
+
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSLog(@"%ld", (long)buttonIndex);
+    if (buttonIndex == 1) {
+        if (self.voted == YES) {
+            [self submitData];
+        }
+        //push to community view
+    }
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
