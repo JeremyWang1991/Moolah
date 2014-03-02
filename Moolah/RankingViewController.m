@@ -38,7 +38,7 @@ CMPopTipView *roundRectButtonPopTipView;
     for (int i = 0; i<self.tweetsArray.count;i++) {
         [self.votesDictionary setObject:[NSNumber numberWithInt:0] forKey:[[[self.tweetsArray objectAtIndex:i] objectForKey:@"id"] stringValue]];
     }
-
+    
 }
 
 - (void)popTipViewWasDismissedByUser:(CMPopTipView *)popTipView {
@@ -208,7 +208,6 @@ CMPopTipView *roundRectButtonPopTipView;
     
     self.voted = NO;
     for (NSString *key in self.votesDictionary) {
-        NSLog(@"%@", [self.votesDictionary objectForKey:key]);
         if ([self.votesDictionary objectForKey:key] != [NSNumber numberWithInt:0]) {
             self.voted = YES;
         }

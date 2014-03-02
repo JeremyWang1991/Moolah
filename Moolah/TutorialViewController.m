@@ -109,7 +109,9 @@
 }
 
 -(void)pushMain {
-
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
 
 - (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
