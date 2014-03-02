@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CommunityCell : UITableViewCell
+@interface CommunityCell : UITableViewCell {
+}
+@property (strong, nonatomic) UILabel *mainLabel;
+@property (strong, nonatomic) UILabel *amountLabel;
+
+@property (strong, nonatomic) UILabel *scoreLabel;
+@property (strong, nonatomic) UILabel *upvoteLabel;
+@property (strong, nonatomic) UILabel *downvoteLabel;
 
 @end
+

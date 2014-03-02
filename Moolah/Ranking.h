@@ -12,5 +12,6 @@
 @protocol Ranking
 -(void)customCell:(UITableViewCell*)cell upBoated:(id)button;
 -(void)customCell:(UITableViewCell*)cell downBoated:(id)button;
+-(void)customCell:(UITableViewCell*)cell infoPressed:(id)button;
 
 @end

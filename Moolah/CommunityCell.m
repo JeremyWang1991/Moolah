@@ -14,7 +14,42 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        // Initialization code
+        CGSize size = self.contentView.frame.size;
+        
+        // Initialize Main Label
+        self.mainLabel = [[UILabel alloc] initWithFrame:CGRectMake(60.0, 8.0, size.width/2, size.height - 16.0)];
+        self.mainLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        self.mainLabel.numberOfLines = -1;
+        // Configure Main Label
+        [self.mainLabel setFont:[UIFont boldSystemFontOfSize:12]];
+        [self.mainLabel setTextAlignment:NSTextAlignmentLeft];
+        [self.mainLabel setTextColor:[UIColor orangeColor]];
+        [self.mainLabel setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight)];
+        
+        // Initialize Amount Label
+        self.amountLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 8.0, size.width-8.0, size.height - 16.0)];
+        [self.amountLabel setTextAlignment:NSTextAlignmentRight];
+        self.amountLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        self.amountLabel.numberOfLines = -1;
+        [self.amountLabel setFont:[UIFont boldSystemFontOfSize:12]];
+        [self.amountLabel setTextColor:[UIColor colorWithRed:83.00/255.00 green:83.00/255.00 blue:83.00/255.00 alpha:1]];
+        [self.amountLabel setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight)];
+        
+        // Initialize Boats
+        self.scoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 8.0, size.width-8.0, size.height - 16.0)];
+        [self.amountLabel setTextAlignment:NSTextAlignmentRight];
+        self.amountLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        self.amountLabel.numberOfLines = -1;
+        [self.amountLabel setFont:[UIFont boldSystemFontOfSize:12]];
+        [self.amountLabel setTextColor:[UIColor orangeColor]];
+        [self.amountLabel setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight)];
+
+        
+        
+        
+        // Add Labels to Content View
+        [self.contentView addSubview:self.mainLabel];
+        [self.contentView addSubview:self.amountLabel];
     }
     return self;
 }

@@ -27,6 +27,12 @@
 		3A915B9918C27CA6005FFE70 /* RankingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A915B9818C27CA6005FFE70 /* RankingCell.m */; };
 		3A915B9B18C27CB0005FFE70 /* fed_spending.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A915B9A18C27CB0005FFE70 /* fed_spending.json */; };
 		3A915B9E18C29D21005FFE70 /* GlobalVar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A915B9D18C29D21005FFE70 /* GlobalVar.m */; };
+		3AA70ABC18C2F67E0045510D /* downvote@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA70ABA18C2F67E0045510D /* downvote@2x.png */; };
+		3AA70ABD18C2F67E0045510D /* upvote@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA70ABB18C2F67E0045510D /* upvote@2x.png */; };
+		3AA70ABF18C2F7900045510D /* upvoteOn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA70ABE18C2F7900045510D /* upvoteOn@2x.png */; };
+		3AA70AC118C2F7950045510D /* downvoteOn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AA70AC018C2F7950045510D /* downvoteOn@2x.png */; };
+		3AA70AC318C2F7DB0045510D /* Nexa Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3AA70AC218C2F7DB0045510D /* Nexa Bold.otf */; };
+		3AA70AC618C304280045510D /* CMPopTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA70AC518C304280045510D /* CMPopTipView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +77,13 @@
 		3A915B9C18C29D21005FFE70 /* GlobalVar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalVar.h; sourceTree = "<group>"; };
 		3A915B9D18C29D21005FFE70 /* GlobalVar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalVar.m; sourceTree = "<group>"; };
 		3A915B9F18C29F86005FFE70 /* Ranking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ranking.h; sourceTree = "<group>"; };
+		3AA70ABA18C2F67E0045510D /* downvote@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "downvote@2x.png"; sourceTree = "<group>"; };
+		3AA70ABB18C2F67E0045510D /* upvote@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upvote@2x.png"; sourceTree = "<group>"; };
+		3AA70ABE18C2F7900045510D /* upvoteOn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upvoteOn@2x.png"; sourceTree = "<group>"; };
+		3AA70AC018C2F7950045510D /* downvoteOn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "downvoteOn@2x.png"; sourceTree = "<group>"; };
+		3AA70AC218C2F7DB0045510D /* Nexa Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa Bold.otf"; sourceTree = "<group>"; };
+		3AA70AC418C304280045510D /* CMPopTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPopTipView.h; sourceTree = "<group>"; };
+		3AA70AC518C304280045510D /* CMPopTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPopTipView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +159,8 @@
 				3A915B7518C27698005FFE70 /* ViewController.m */,
 				3A915B9C18C29D21005FFE70 /* GlobalVar.h */,
 				3A915B9D18C29D21005FFE70 /* GlobalVar.m */,
+				3AA70AC418C304280045510D /* CMPopTipView.h */,
+				3AA70AC518C304280045510D /* CMPopTipView.m */,
 				3A915B7718C27698005FFE70 /* Images.xcassets */,
 				3A915B6618C27698005FFE70 /* Supporting Files */,
 			);
@@ -155,6 +170,11 @@
 		3A915B6618C27698005FFE70 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3AA70AC218C2F7DB0045510D /* Nexa Bold.otf */,
+				3AA70AC018C2F7950045510D /* downvoteOn@2x.png */,
+				3AA70ABE18C2F7900045510D /* upvoteOn@2x.png */,
+				3AA70ABA18C2F67E0045510D /* downvote@2x.png */,
+				3AA70ABB18C2F67E0045510D /* upvote@2x.png */,
 				3A915B9A18C27CB0005FFE70 /* fed_spending.json */,
 				3A915B6718C27698005FFE70 /* Moolah-Info.plist */,
 				3A915B6818C27698005FFE70 /* InfoPlist.strings */,
@@ -258,9 +278,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AA70ABF18C2F7900045510D /* upvoteOn@2x.png in Resources */,
+				3AA70ABC18C2F67E0045510D /* downvote@2x.png in Resources */,
+				3AA70ABD18C2F67E0045510D /* upvote@2x.png in Resources */,
 				3A915B7818C27698005FFE70 /* Images.xcassets in Resources */,
+				3AA70AC118C2F7950045510D /* downvoteOn@2x.png in Resources */,
 				3A915B6A18C27698005FFE70 /* InfoPlist.strings in Resources */,
 				3A915B7318C27698005FFE70 /* Main.storyboard in Resources */,
+				3AA70AC318C2F7DB0045510D /* Nexa Bold.otf in Resources */,
 				3A915B9B18C27CB0005FFE70 /* fed_spending.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +308,7 @@
 				3A915B9E18C29D21005FFE70 /* GlobalVar.m in Sources */,
 				3A915B7618C27698005FFE70 /* ViewController.m in Sources */,
 				3A915B7018C27698005FFE70 /* AppDelegate.m in Sources */,
+				3AA70AC618C304280045510D /* CMPopTipView.m in Sources */,
 				3A89F12B18C2BD56009837C9 /* CommunityViewController.m in Sources */,
 				3A915B9918C27CA6005FFE70 /* RankingCell.m in Sources */,
 				3A915B6C18C27698005FFE70 /* main.m in Sources */,

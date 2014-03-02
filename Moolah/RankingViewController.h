@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "RankingCell.h"
 #import "Ranking.h"
+#import "CMPopTipView.h"
 
-
-@interface RankingViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, Ranking>
+@interface RankingViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, Ranking, CMPopTipViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *tweetsArray;

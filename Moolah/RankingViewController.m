@@ -15,6 +15,8 @@
 
 @implementation RankingViewController
 
+CMPopTipView *roundRectButtonPopTipView;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -37,13 +39,18 @@
 
 }
 
+- (void)popTipViewWasDismissedByUser:(CMPopTipView *)popTipView {
+    // User can tap CMPopTipView to dismiss it
+    roundRectButtonPopTipView = nil;
+}
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.tweetsArray count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 80;
+    return 90;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -57,7 +64,7 @@
     }
     
     NSString *tweet = [[self.tweetsArray objectAtIndex:indexPath.row] objectForKey:@"title"];
-    [cell.mainLabel setText:tweet];
+    [cell.mainLabel setText:[NSString stringWithFormat:@"%d. %@", indexPath.row+1,tweet]];
     
     NSNumber *voteStatus = [self.votesDictionary objectForKey:[[[self.tweetsArray objectAtIndex:indexPath.row] objectForKey:@"id"] stringValue]];
     if(voteStatus.intValue==0) {
@@ -80,7 +87,8 @@
     float percentage = [tweet2 intValue]/2232736.00;
     float milz = [tweet2 intValue]/1000.00;
     
-    NSString *currency = [NSString stringWithFormat:@"$%.1f Million\n(%.2f%%)", milz,percentage];
+    NSString *currency = [NSString stringWithFormat:@"$%.1f Million (%.3f%%)", milz,percentage];
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
 
     
     [cell.amountLabel setText:currency];
@@ -89,26 +97,62 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (nil == roundRectButtonPopTipView) {
+        roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"I am getting data from the server and displaying that data into my tableviewcell. but i want to load only 10 records at a time. for this purpose i am using limit-offset thing. but i'm not very much clear how to do this in ios. I am setting those limit-offset in NSUrl."];
+        roundRectButtonPopTipView.delegate = self;
+        roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
+        roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
+        
+        UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+        
+        [roundRectButtonPopTipView presentPointingAtView:cell inView:self.view animated:YES];
+    }
+    else {
+        // Dismiss
+        [roundRectButtonPopTipView dismissAnimated:YES];
+        roundRectButtonPopTipView = nil;
+    }
+}
+
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    if (nil != roundRectButtonPopTipView) {
+
+    [roundRectButtonPopTipView dismissAnimated:YES];
+    roundRectButtonPopTipView = nil;
+    }
+}
+
+
+
 -(void) customCell:(UITableViewCell *)cell upBoated:(id)sender {
     int i = [self.tableView indexPathForCell:cell].row;
-    NSLog(@"%d",i);
-    
-    NSString *title = [[self.tweetsArray objectAtIndex:i] objectForKey:@"title"];
 
-    
-    
-    
     [self.votesDictionary setObject:[NSNumber numberWithInt:1] forKey:[[[self.tweetsArray objectAtIndex:i] objectForKey:@"id"] stringValue]];
 
 }
 
 -(void) customCell:(UITableViewCell *)cell downBoated:(id)sender {
     int i = [self.tableView indexPathForCell:cell].row;
-    NSLog(@"%d",i);
-    
-    NSString *title = [[self.tweetsArray objectAtIndex:i] objectForKey:@"title"];
     
     [self.votesDictionary setObject:[NSNumber numberWithInt:-1] forKey:[[[self.tweetsArray objectAtIndex:i] objectForKey:@"id"] stringValue]];
+}
+
+-(void) customCell:(UITableViewCell *)cell infoPressed:(id)button {
+    if (nil == roundRectButtonPopTipView) {
+        roundRectButtonPopTipView = [[CMPopTipView alloc] initWithMessage:@"I am getting data from the server and displaying that data into my tableviewcell. but i want to load only 10 records at a time. for this purpose i am using limit-offset thing. but i'm not very much clear how to do this in ios. I am setting those limit-offset in NSUrl."];
+        roundRectButtonPopTipView.delegate = self;
+        roundRectButtonPopTipView.backgroundColor = [UIColor lightGrayColor];
+        roundRectButtonPopTipView.textColor = [UIColor darkTextColor];
+        
+        [roundRectButtonPopTipView presentPointingAtView:cell inView:self.view animated:YES];
+    }
+    else {
+        // Dismiss
+        [roundRectButtonPopTipView dismissAnimated:YES];
+        roundRectButtonPopTipView = nil;
+    }
+
 }
 
 - (void)didReceiveMemoryWarning
