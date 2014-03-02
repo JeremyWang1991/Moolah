@@ -18,19 +18,20 @@
         CGSize size = self.contentView.frame.size;
         
         // Initialize Main Label
-        self.mainLabel = [[UILabel alloc] initWithFrame:CGRectMake(75, 8.0, size.width-80, 20)];
+        self.mainLabel = [[UILabel alloc] initWithFrame:CGRectMake(75, 5.0, size.width-80, 40)];
+        self.mainLabel.adjustsFontSizeToFitWidth = YES;
+        
         self.mainLabel.lineBreakMode = NSLineBreakByWordWrapping;
         self.mainLabel.numberOfLines = -1;
         // Configure Main Label
-        [self.mainLabel setFont:FONT_SOHO_STD(20)];
+        [self.mainLabel setFont:FONT_SOHO_STD(17)];
         [self.mainLabel setTextAlignment:NSTextAlignmentLeft];
         [self.mainLabel setTextColor:[UIColor colorWithRed:83.00/255.00 green:83.00/255.00 blue:83.00/255.00 alpha:1]];
 //        [self.mainLabel setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight)];
         [self.mainLabel setAutoresizingMask:UIViewAutoresizingNone];
-        self.mainLabel.adjustsFontSizeToFitWidth = YES;
         
         // Initialize Amount Label
-        self.amountLabel = [[UILabel alloc] initWithFrame:CGRectMake(75, 20, size.width-100.0, size.height - 6.0)];
+        self.amountLabel = [[UILabel alloc] initWithFrame:CGRectMake(75, 25, size.width-100.0, size.height - 6.0)];
         [self.amountLabel setTextAlignment:NSTextAlignmentLeft];
         self.amountLabel.lineBreakMode = NSLineBreakByWordWrapping;
         self.amountLabel.numberOfLines = 1;
