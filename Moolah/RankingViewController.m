@@ -30,14 +30,18 @@ CMPopTipView *roundRectButtonPopTipView;
     NSArray *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
     
     self.tweetsArray = json;
-    self.votesDictionary = [[NSMutableDictionary alloc] init];
     
-    
-    
-    
-    for (int i = 0; i<self.tweetsArray.count;i++) {
-        [self.votesDictionary setObject:[NSNumber numberWithInt:0] forKey:[[[self.tweetsArray objectAtIndex:i] objectForKey:@"id"] stringValue]];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    self.votesDictionary = (NSMutableDictionary *)[defaults objectForKey:@"votes"];
+    if (!self.votesDictionary) {
+        NSLog(@"%@", self.votesDictionary);
+        self.votesDictionary = [[NSMutableDictionary alloc] init];
+        for (int i = 0; i<self.tweetsArray.count;i++) {
+            [self.votesDictionary setObject:[NSNumber numberWithInt:0] forKey:[[[self.tweetsArray objectAtIndex:i] objectForKey:@"id"] stringValue]];
+        }
     }
+    
+ 
     
 }
 
@@ -91,7 +95,7 @@ CMPopTipView *roundRectButtonPopTipView;
     
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
     [numberFormatter setNumberStyle: NSNumberFormatterCurrencyStyle];
-    if (milz < 10) {
+    if (milz < 25) {
         [numberFormatter setMaximumFractionDigits:2];
     } else {
         [numberFormatter setMaximumFractionDigits:0];
@@ -110,7 +114,6 @@ CMPopTipView *roundRectButtonPopTipView;
 
     
     [cell.amountLabel setText:currency];
-//    [cell.amountLabel setText:monies];
     
     
     return cell;
@@ -148,13 +151,20 @@ CMPopTipView *roundRectButtonPopTipView;
     int i = [self.tableView indexPathForCell:cell].row;
 
     [self.votesDictionary setObject:[NSNumber numberWithInt:1] forKey:[[[self.tweetsArray objectAtIndex:i] objectForKey:@"id"] stringValue]];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:self.votesDictionary forKey:@"votes"];
 
+    
 }
 
 -(void) customCell:(UITableViewCell *)cell downBoated:(id)sender {
     int i = [self.tableView indexPathForCell:cell].row;
     
     [self.votesDictionary setObject:[NSNumber numberWithInt:-1] forKey:[[[self.tweetsArray objectAtIndex:i] objectForKey:@"id"] stringValue]];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:self.votesDictionary forKey:@"votes"];
 }
 
 -(void) customCell:(UITableViewCell *)cell infoPressed:(id)button {

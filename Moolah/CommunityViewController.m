@@ -51,7 +51,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 65;
+    return 75;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -72,7 +72,34 @@
     float percentage = [tweet2 intValue]/2232736.00;
     float milz = [tweet2 intValue]/1000.00;
     
-    NSString *currency = [NSString stringWithFormat:@"$%.1f Million\n(%.2f%%)", milz,percentage];
+//    NSString *currency = [NSString stringWithFormat:@"$%.1f Million\n(%.2f%%)", milz,percentage];
+    
+//    float percentage = [tweet2 intValue]/2232736.00;
+//    float milz = [tweet2 intValue]/1000.00;
+    
+    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+    [numberFormatter setNumberStyle: NSNumberFormatterCurrencyStyle];
+    if (milz < 25) {
+        [numberFormatter setMaximumFractionDigits:2];
+    } else {
+        [numberFormatter setMaximumFractionDigits:0];
+    }
+    
+    NSString *monies = [numberFormatter stringFromNumber:[NSNumber numberWithFloat:milz]];
+    
+    NSString *currency = [[NSString alloc] init];
+    
+    if (milz < 1500) {
+        currency = [NSString stringWithFormat:@"~%@ M (%.3f%%)", monies,percentage];
+    } else {
+        currency = [NSString stringWithFormat:@"%@ M (%.1f%%)", monies,percentage];
+    }
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    
+    
+    [cell.amountLabel setText:currency];
+    
+    
     
     NSString *tweet3 = [[self.tweetsArray objectAtIndex:indexPath.row] objectForKey:@"score"];
     [cell.scoreLabel setText:tweet3];
