@@ -7,12 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RankingViewController.h"
+#import "Ranking.h"
 
-@interface RankingCell : UITableViewCell
+
+@interface RankingCell : UITableViewCell {
+}
 @property (strong, nonatomic) UILabel *mainLabel;
 @property (strong, nonatomic) UILabel *amountLabel;
 
 @property (strong, nonatomic) UIButton *upBoat;
-@property (strong, nonatomic) UILabel *downBoat;
+@property (strong, nonatomic) UIButton *downBoat;
+
+@property (nonatomic, assign) id<Ranking> delegate;
 
 @end
+

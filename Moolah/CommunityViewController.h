@@ -1,5 +1,5 @@
 //
-//  RankingViewController.h
+//  CommunityViewController.h
 //  Moolah
 //
 //  Created by Tse-Chi Wang on 3/1/2014.
@@ -7,15 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RankingCell.h"
-#import "Ranking.h"
 
-
-@interface RankingViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, Ranking>
+@interface CommunityViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *tweetsArray;
+@property (strong, nonatomic) NSArray *json;
 @property (strong, nonatomic) NSMutableDictionary *votesDictionary;
-- (IBAction)submitPressed:(id)sender;
 
 @end

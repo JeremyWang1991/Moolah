@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A89F12B18C2BD56009837C9 /* CommunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A89F12A18C2BD56009837C9 /* CommunityViewController.m */; };
+		3A89F12E18C2C989009837C9 /* CommunityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A89F12D18C2C989009837C9 /* CommunityCell.m */; };
 		3A915B6018C27698005FFE70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A915B5F18C27697005FFE70 /* Foundation.framework */; };
 		3A915B6218C27698005FFE70 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A915B6118C27698005FFE70 /* CoreGraphics.framework */; };
 		3A915B6418C27698005FFE70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A915B6318C27698005FFE70 /* UIKit.framework */; };
@@ -24,6 +26,7 @@
 		3A915B9618C277C2005FFE70 /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A915B9518C277C2005FFE70 /* RankingViewController.m */; };
 		3A915B9918C27CA6005FFE70 /* RankingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A915B9818C27CA6005FFE70 /* RankingCell.m */; };
 		3A915B9B18C27CB0005FFE70 /* fed_spending.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A915B9A18C27CB0005FFE70 /* fed_spending.json */; };
+		3A915B9E18C29D21005FFE70 /* GlobalVar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A915B9D18C29D21005FFE70 /* GlobalVar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A89F12918C2BD56009837C9 /* CommunityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityViewController.h; sourceTree = "<group>"; };
+		3A89F12A18C2BD56009837C9 /* CommunityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityViewController.m; sourceTree = "<group>"; };
+		3A89F12C18C2C989009837C9 /* CommunityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityCell.h; sourceTree = "<group>"; };
+		3A89F12D18C2C989009837C9 /* CommunityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityCell.m; sourceTree = "<group>"; };
 		3A915B5C18C27697005FFE70 /* Moolah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moolah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A915B5F18C27697005FFE70 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3A915B6118C27698005FFE70 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,6 +68,9 @@
 		3A915B9718C27CA6005FFE70 /* RankingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingCell.h; sourceTree = "<group>"; };
 		3A915B9818C27CA6005FFE70 /* RankingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingCell.m; sourceTree = "<group>"; };
 		3A915B9A18C27CB0005FFE70 /* fed_spending.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fed_spending.json; sourceTree = "<group>"; };
+		3A915B9C18C29D21005FFE70 /* GlobalVar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalVar.h; sourceTree = "<group>"; };
+		3A915B9D18C29D21005FFE70 /* GlobalVar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalVar.m; sourceTree = "<group>"; };
+		3A915B9F18C29F86005FFE70 /* Ranking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ranking.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,12 +133,19 @@
 				3A915B6E18C27698005FFE70 /* AppDelegate.h */,
 				3A915B6F18C27698005FFE70 /* AppDelegate.m */,
 				3A915B7118C27698005FFE70 /* Main.storyboard */,
+				3A89F12918C2BD56009837C9 /* CommunityViewController.h */,
+				3A89F12A18C2BD56009837C9 /* CommunityViewController.m */,
+				3A89F12C18C2C989009837C9 /* CommunityCell.h */,
+				3A89F12D18C2C989009837C9 /* CommunityCell.m */,
 				3A915B9418C277C2005FFE70 /* RankingViewController.h */,
 				3A915B9518C277C2005FFE70 /* RankingViewController.m */,
 				3A915B9718C27CA6005FFE70 /* RankingCell.h */,
 				3A915B9818C27CA6005FFE70 /* RankingCell.m */,
+				3A915B9F18C29F86005FFE70 /* Ranking.h */,
 				3A915B7418C27698005FFE70 /* ViewController.h */,
 				3A915B7518C27698005FFE70 /* ViewController.m */,
+				3A915B9C18C29D21005FFE70 /* GlobalVar.h */,
+				3A915B9D18C29D21005FFE70 /* GlobalVar.m */,
 				3A915B7718C27698005FFE70 /* Images.xcassets */,
 				3A915B6618C27698005FFE70 /* Supporting Files */,
 			);
@@ -263,11 +280,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A915B9E18C29D21005FFE70 /* GlobalVar.m in Sources */,
 				3A915B7618C27698005FFE70 /* ViewController.m in Sources */,
 				3A915B7018C27698005FFE70 /* AppDelegate.m in Sources */,
+				3A89F12B18C2BD56009837C9 /* CommunityViewController.m in Sources */,
 				3A915B9918C27CA6005FFE70 /* RankingCell.m in Sources */,
 				3A915B6C18C27698005FFE70 /* main.m in Sources */,
 				3A915B9618C277C2005FFE70 /* RankingViewController.m in Sources */,
+				3A89F12E18C2C989009837C9 /* CommunityCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +496,7 @@
 				3A915B9018C27698005FFE70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A915B9118C27698005FFE70 /* Build configuration list for PBXNativeTarget "MoolahTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +505,7 @@
 				3A915B9318C27698005FFE70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
