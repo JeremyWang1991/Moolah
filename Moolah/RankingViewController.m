@@ -161,17 +161,72 @@ CMPopTipView *roundRectButtonPopTipView;
     // Dispose of any resources that can be recreated.
 }
 
+
 - (IBAction)submitPressed:(id)sender {
+//    CGRect screenRect = [[UIScreen mainScreen] bounds];
+//    CGFloat screenWidth = screenRect.size.width;
+//    CGFloat screenHeight = screenRect.size.height;
+//    self.bgOverlay = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
+//    [self.bgOverlay setBackgroundColor:[UIColor blackColor]];
+//    [self.bgOverlay setAlpha:0];
+//    self.censusView = [[UIView alloc] initWithFrame:CGRectMake(35, 60, 250, 300)];
+//    [self.censusView setBackgroundColor:[UIColor whiteColor]];
+//    [self.censusView setAlpha:0];
+//    self.censusView.layer.cornerRadius = 20;
+//    [self.view addSubview:self.bgOverlay];
+//    [self.view addSubview:self.censusView];
+//    [UIView animateWithDuration:0.3 animations:^{
+//        [self.bgOverlay setAlpha:0.5];
+//        [self.censusView setAlpha:1.0];
+//    }];
+//    
+//    UILabel *requestCensus = [[UILabel alloc] initWithFrame:CGRectMake(30, 30, 190, 200)];
+//    requestCensus.numberOfLines = 0;
+//    requestCensus.textAlignment = NSTextAlignmentCenter;
+//    requestCensus.text = @"Would you like to submit some demographic data along with your feedback?";
+//    [requestCensus sizeToFit];
+//    [self.censusView addSubview:requestCensus];
+//    
+//    UIButton *censusYes = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//    censusYes.titleLabel.textAlignment = NSTextAlignmentCenter;
+//    [censusYes setTitle:@"Sure thing" forState:UIControlStateNormal];
+//    censusYes.frame = CGRectMake(30, 130, 190, 30);
+//    [self.censusView addSubview:censusYes];
+    
+//    UIPickerView *picker = [[UIPickerView alloc] init];
+//    
+//    
+//    UIButton *censusNo = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//    censusNo.titleLabel.textAlignment = NSTextAlignmentCenter;
+//    [censusNo setTitle:@"No thanks, go without" forState:UIControlStateNormal];
+//    censusNo.frame = CGRectMake(30, 180, 190, 30);
+//    [self.censusView addSubview:censusNo];
+//    [censusNo addTarget:self action:@selector(submitData) forControlEvents:UIControlEventTouchUpInside];
+//    [censusNo addTarget:self action:@selector(removeCensusView) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self submitData];
+    
+}
+
+- (void)removeCensusView {
+    for (UIView *view in @[self.bgOverlay, self.censusView]) {
+        [UIView animateWithDuration:0.3
+                         animations:^{
+                             [view setAlpha:0];
+                         }
+                         completion:^(BOOL finished) {
+                             [view removeFromSuperview];
+                         }];
+    }
+}
+
+- (void)submitData {
     NSMutableDictionary *dicToSend = [[NSMutableDictionary alloc] init];
     [dicToSend setObject:self.votesDictionary forKey:@"votes"];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
+    
     [dicToSend setObject:[defaults objectForKey:@"UUID"] forKey:@"device_id"];
-    
-    
-    
-    
     
     //convert object to data
     NSData* jsonData = [NSJSONSerialization dataWithJSONObject:dicToSend options:kNilOptions error:nil];
@@ -186,11 +241,19 @@ CMPopTipView *roundRectButtonPopTipView;
     [rq setValue:[NSString stringWithFormat:@"%ld", (long)[jsonData length]] forHTTPHeaderField:@"Content-Length"];
     
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
-
+    
     
     [NSURLConnection sendAsynchronousRequest:rq queue:queue completionHandler:^(NSURLResponse *rsp, NSData *data, NSError *err) {
         NSLog(@"POST sent!");
     }];
-    
 }
+
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    CGPoint locationPoint = [[touches anyObject] locationInView:self.view];
+    UIView* touchedView = [self.view hitTest:locationPoint withEvent:event];
+    if (touchedView == self.bgOverlay) {
+        [self removeCensusView];
+    }
+}
+
 @end
