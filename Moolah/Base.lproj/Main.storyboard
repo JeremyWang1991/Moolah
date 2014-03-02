@@ -33,7 +33,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ElD-xV-Sum" kind="modal" id="Yxb-q1-Sfi"/>
+                                    <segue destination="ElD-xV-Sum" kind="push" id="Yxb-q1-Sfi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Btp-vW-pQD">
@@ -131,10 +131,10 @@
             </objects>
             <point key="canvasLocation" x="1636" y="970"/>
         </scene>
-        <!--Community View Controller-->
+        <!--Community View Controller - Community Votes-->
         <scene sceneID="Yfg-aR-beP">
             <objects>
-                <viewController id="ElD-xV-Sum" customClass="CommunityViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CommunityViewController" id="ElD-xV-Sum" customClass="CommunityViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6EU-a8-UqL"/>
                         <viewControllerLayoutGuide type="bottom" id="OPz-Ix-mQi"/>
@@ -146,15 +146,6 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ho-lV-DI6">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Community Votes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UY9-xY-3Al">
-                                        <rect key="frame" x="90" y="30" width="140" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                                 <color key="backgroundColor" red="0.60784313729999995" green="0.2274509804" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="uca-jZ-Vag">
@@ -165,6 +156,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Community Votes" id="23r-k0-i0H"/>
                     <connections>
                         <outlet property="tableView" destination="uca-jZ-Vag" id="vhI-CN-rMx"/>
                     </connections>
